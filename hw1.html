@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <title>Todos</title>
@@ -8,35 +8,24 @@
 </head>
 
 <body>
-    <div class="header logo">
-        todos
-    </div>
-    <div class="main">
+    <header>
+        <h1>todos</h1>
+    </header>
+    <main class="main">
         <div class="input">
-            <button class="select_all"></button>
-            <input type="text" placeholder="What needs to be done?">
+            <button class="select_all" data-message="select all">select all</button>
+            <input type="text" id="new" label="Add new item" autofocus="autofocus">
+            <label for="new">What needs to be done?</label>
         </div>
         <div class="tasks_block">
             <ul>
                 <li class="task">
-                    <!--css cursor: pointer;-->
                     <div class="completed">
-                        <input type="submit">
+                        <input type="checkbox" id="complete" label="completed task">
+                        <label for="complete">complete this task</label>
                     </div>
-                    <div class="task_text">
-                    </div>
-                    <div class="close">
-                    </div>
-                </li>
-                <li class="task checked">
-                    <div class="completed">
-                        <input type="submit">
-                    </div>
-                    <div class="task_text">
-                        <span></span>
-                    </div>
-                    <div class="close">
-                    </div>
+                    <span class="task_text"></span>
+                    <button class="delete" data-message="delete this task">delete this task</button>
                 </li>
             </ul>
         </div>
@@ -45,15 +34,21 @@
                 items left
             </div>
             <div class="sorting">
-                <button placeholder="All"></button>
-                <button placeholder="Active"></button>
-                <button placeholder="Comlited"></button>
+                <fieldset>
+                    <legend>view your tasks</legend>
+                    <input type="radio" id="all" name="sorting" value="all" checked>
+                    <label for="all">All</label>
+                    <input type="radio" id="active" name="sorting" value="active">
+                    <label for="active">Active</label>
+                    <input type="radio" id="complited" name="sorting" value="complited">
+                    <label for="complited">Complited</label>
+                </fieldset>
             </div>
             <div class="clear">
-                <button placeholder="Clear complited"></button>
+                <button placeholder="Clear complited" data-message="clear completed">clear completed</button>
             </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
