@@ -5,6 +5,7 @@
     <title>Todos</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
@@ -12,37 +13,41 @@
         <h1>todos</h1>
     </header>
     <main class="main">
-        <div class="input">
-            <button class="select_all">select all</button>
-            <input type="text" id="new" label="Add new item" autofocus="autofocus">
-            <label for="new">What needs to be done?</label>
+        <div class="input-new-task">
+            <button class="input-new-task_btn-select-all">select all</button>
+            <input type="text" id="add-new-task" label="Add new item" autofocus="autofocus" placeholder="What needs to be done?">
+            <label for="add-new-task">
+                What needs to be done?
+            </label>
         </div>
-        <div class="tasks_block">
+        <div class="tasks-block">
             <ul>
-                <li class="task">
-                    <div class="completed">
-                        <input type="checkbox" id="complete" label="completed task">
-                        <label for="complete">complete this task</label>
+                <li class="tasks-block_item">
+                    <div class="tasks-block_item_complete">
+                        <input type="checkbox" id="complete-the-task" label="completed task">
+                        <label for="complete-the-task">complete this task</label>
                     </div>
-                    <span class="task_text"></span>
-                    <button class="delete">delete this task</button>
+                    <span class="tasks-block_item_task_text">
+                    text first task</span>
+                    <button class="tasks-block_item_task_delete">delete this task</button>
                 </li>
             </ul>
         </div>
         <div class="footer">
-            <div class="left">
+            <div class="footer_items-left">
                 items left
             </div>
-            <div class="sorting">
-                <button placeholder="All">All</button>
-                <button placeholder="Active">Active</button>
-                <button placeholder="Complited">Complited</button>
+            <div class="footer_tasks-sorting">
+                <input type="radio" id="sorting-all" value="All" checked>
+                <label for="sorting-all">All</label>
+                <input type="radio" id="sorting-active" value="Active">
+                <label for="sorting-active">Active</label>
+                <input type="radio" id="sorting-complited" value="Complited"> 
+                <label for="sorting-complited">Complited</label>
             </div>
-            <div class="clear">
-                <button placeholder="Clear complited">clear completed</button>
+            <div class="footer_clear">
+                <button placeholder="Clear complited">Clear completed</button>
             </div>
         </div>
     </main>
-</body>
-
-</html>
+</body></html>
