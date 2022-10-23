@@ -5,88 +5,197 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    color:#888888;
+    color: #888888;
 }
 
-header {
-    font-size: 33px;
-    color: #CCCCCC;
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+}
+
+.header-text {
+    font-size: 100px;
+    font-weight: 100;
+    color: #cccccc;
 }
 
 .main {
-    position: relative;
     max-width: 562px;
     width: 100%;
-    margin: 115px auto 0;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.input-new-task {
+.main_parent {
     position: relative;
-    height: 66px;
+}
+
+.input-new-task {
+    display: flex;
+    height: 63px;
     border-bottom: 1px solid #e5e5e5;
-    resize: none;
 }
 
 .input-new-task_btn-select-all {
-    width: 55px;
+    background-image: url("../images/select-all.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    background-color: #ffffff;
+    height: 12px;
+    width: 26px;
+    margin: 26px 16px;
+    border: 0;
     font-size: 0;
 }
 
-.input-new-task input {
+.input-new-task_input_w_placeholder {
     height: 100%;
+    width: 100%;
+    margin-right: 0;
     font-size: 24px;
-    color: #CCCCCC;
+    color: #cccccc;
     font-style: italic;
     font-weight: 300;
     border: 0;
 }
 
-.input-new-task label {
+.input-new-task_input_w_placeholder:focus {
+    color: #666666;
+    font-style: inherit;
+}
+
+.input-new-task_label {
     font-size: 0;
 }
 
 .tasks-block {
+    max-height: 296px;
     overflow-y: auto;
+
 }
 
 .tasks-block_item {
     display: flex;
-    padding: 20px 10px;
+    height: 60px;
+    padding: 12px 10px;
     cursor: pointer;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .tasks-block_item:hover {
-    background-color: #E6E6E6;
+    background-color: #fafafa;
 }
 
-.tasks-block_item_complete {
+.tasks-block_item_complete input {
+    appearance: none;
+    align-self: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #e6e6e6;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.tasks-block_item_complete input:focus,
+.tasks-block_item_complete input:hover {
+    border: 1px solid #60c2b1;
+}
+
+.tasks-block_item_complete input:checked {
+    background-image: url("../images/completed.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    border: 1px solid #60c2b1;
+}
+
+.tasks-block_item_label {
     font-size: 0;
 }
 
 .tasks-block_item_task_text {
-    margin: 0 10px 0 10px;
+    margin-right: auto;
+    align-self: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: #666666;
 }
+
 .tasks-block_item_task_delete {
+    background-image: url("../images/close.png");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    align-self: center;
     font-size: 0;
+    border: 0;
+    opacity: 0;
+    background-color: #ffffff;
+}
+
+.tasks-block_item_task_delete:focus {
+    opacity: inherit;
+}
+
+.tasks-block_item:hover > .tasks-block_item_task_delete {
+    opacity: inherit;
+    background-color: #fafafa;
 }
 
 .footer {
-    margin: 10px;
+    height: 40px;
+    margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .footer_items-left {
     font-size: 14px;
 }
-.footer_clear button{
+
+.footer_tasks-sorting {
+    display: flex;
+}
+
+.footer_tasks-sorting_input input {
+    appearance: none;
+}
+
+.footer_tasks-sorting_input_label {
+    border-radius: 10%;
+    padding: 0 5px;
+}
+
+.footer_tasks-sorting_input input:checked + .footer_tasks-sorting_input_label {
+    border: 1px solid #ebdfdf;
+}
+
+.footer_tasks-sorting_input input:hover + .footer_tasks-sorting_input_label,
+.footer_tasks-sorting_input input:focus + .footer_tasks-sorting_input_label {
+    border: 1px solid #e5e5e5;
+}
+
+
+.footer_clear button {
     background-color: #ffffff;
     border: 0;
 }
+
 .footer_clear button:hover {
     cursor: pointer;
-  color:#000000;
+    color: #000000;
+}
+
+.main_child {
+    position: absolute;
+    top: 100%;
+    left: 2px;
+    right: 2px;
+    height: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
 }
