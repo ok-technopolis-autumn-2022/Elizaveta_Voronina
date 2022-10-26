@@ -39,16 +39,15 @@ body {
 }
 
 .input-new-task_btn-select-all {
-    background-image: url("../images/select-all.png");
+    background-image: url("../images/select-all.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 24px;
     background-color: #ffffff;
-    height: 12px;
-    width: 26px;
-    margin: 26px 16px;
+    margin: 21px 10px;
+    padding: 10px 15px;
     border: 0;
     font-size: 0;
+    cursor: pointer;
 }
 
 .input-new-task_input_w_placeholder {
@@ -74,12 +73,10 @@ body {
 .tasks-block {
     max-height: 296px;
     overflow-y: auto;
-
 }
 
 .tasks-block_item {
     display: flex;
-    height: 60px;
     padding: 12px 10px;
     cursor: pointer;
     border-bottom: 1px solid #e5e5e5;
@@ -105,10 +102,9 @@ body {
 }
 
 .tasks-block_item_complete input:checked {
-    background-image: url("../images/completed.png");
+    background-image: url("../images/ok.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 20px;
     border: 1px solid #60c2b1;
 }
 
@@ -125,15 +121,15 @@ body {
 }
 
 .tasks-block_item_task_delete {
-    background-image: url("../images/close.png");
-    background-size: 20px;
-    width: 20px;
-    height: 20px;
-    align-self: center;
-    font-size: 0;
-    border: 0;
-    opacity: 0;
+    background-image: url("../images/delete.svg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: #ffffff;
+    opacity: 0;
+    padding: 15px;
+    border: 0;
+    font-size: 0;
+    cursor: pointer;
 }
 
 .tasks-block_item_task_delete:focus {
@@ -161,13 +157,19 @@ body {
     display: flex;
 }
 
+.footer_tasks-sorting_input {
+    padding: 5px;
+}
+
 .footer_tasks-sorting_input input {
     appearance: none;
 }
 
 .footer_tasks-sorting_input_label {
     border-radius: 10%;
-    padding: 0 5px;
+    padding: 3px 10px;
+    display: inline-block;
+    border: 1px solid #0000;
 }
 
 .footer_tasks-sorting_input input:checked + .footer_tasks-sorting_input_label {
@@ -181,6 +183,7 @@ body {
 
 
 .footer_clear button {
+    padding: 5px;
     background-color: #ffffff;
     border: 0;
 }
