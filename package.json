@@ -1,0 +1,24 @@
+{
+  "name": "elizaveta_voronina",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --dist-dir public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-autumn-2022/Elizaveta_Voronina.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-autumn-2022/Elizaveta_Voronina/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-autumn-2022/Elizaveta_Voronina#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
