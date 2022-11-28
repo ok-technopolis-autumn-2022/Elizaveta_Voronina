@@ -1,0 +1,31 @@
+{
+  "name": "elizaveta_voronina",
+  "version": "1.0.0",
+  "description": "Todos",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx tailwindcss -i src/css/styles.css -o src/css/output.css --watch"
+  },
+  "keywords": [
+    "Todos"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-autumn-2022/Elizaveta_Voronina.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-autumn-2022/Elizaveta_Voronina/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-autumn-2022/Elizaveta_Voronina#readme",
+  "dependencies": {
+    "postcss-nested": "^6.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
+    "parcel": "^2.0.0"
+  }
+}
